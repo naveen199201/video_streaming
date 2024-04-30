@@ -1,0 +1,219 @@
+.header-container {
+
+  padding-inline: 2%;
+  background-color: cadetblue;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-inline-start: 20px;
+
+}
+
+.header-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.search-input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4rem;
+  width: 90%;
+}
+
+.search-button {
+  padding: 0.8rem 1rem;
+  position: absolute;
+  right: 10vw;
+  border: 1px solid #ccc;
+  border-radius: 4rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.profile {
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    font-size: 2.5em;
+    color: #fff;
+    padding-top: 10px;
+  }
+}
+
+.uploader {
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+
+  svg {
+    font-size: 2.5em;
+    color: #fff;
+    padding-top: 10px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding-block: 1%;
+}
+
+.player {
+  width: 100vh;
+  padding-inline: 2%;
+
+  .playing-video-title {
+    font-weight: bold;
+    font-size: x-large;
+
+  }
+
+  .view {
+    margin-right: 1px;
+    font-size: small;
+  }
+}
+
+.view-count {
+  display: inline-flex;
+
+  span {
+    padding-left: 5px;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feed-container {
+  margin-block: 1%;
+  padding-inline: 2%;
+}
+
+.feed-grid {
+  /* background-color:antiquewhite; */
+}
+
+.feed-card {
+  height: 350px;
+  cursor: pointer;
+
+  h1 {
+    font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+}
+
+.feed-card-media {
+  height: 60%;
+  object-fit: fill;
+}
+
+.remaining-videos-card {
+  height: 300px;
+  margin: 1%;
+
+}
+
+.video-category {
+  margin-bottom: 30px;
+
+  button {
+    padding: 20px;
+    margin-right: 20px;
+    background: cadetblue;
+    color: #fff;
+    font-size: 20px;
+    border: 5px;
+    cursor: pointer;
+  }
+
+  button.active {
+    font-size: 24px;
+    padding: 25px;
+  }
+
+}
+
+.display-container {
+  padding: 2%;
+
+}
+
+.login-container, .signup-container {
+  font-size: 15px;
+  padding: 50px;
+  margin-top: 5%;
+  background: #f9f9f9;
+  .login-button,
+  .login-button:hover,
+  .signup-button,
+  .signup-button:hover {
+    background: cadetblue;
+    margin: 30px 30px 40px 0px;
+    padding: 10px 20px;
+  }
+  span {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .search-input {
+    /* flex: 1; */
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4rem;
+  }
+
+  .search-button {
+    padding: 0.8rem 1rem;
+    position: absolute;
+    /* left: 20px; */
+    right: 18vw;
+    border: 1px solid #ccc;
+    border-radius: 4rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .remaining-videos-card {
+    height: 200px;
+    margin: 2%;
+  }
+
+  .player .video-player {
+    height: 500px;
+  }
+
+}
