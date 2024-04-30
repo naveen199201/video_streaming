@@ -34,6 +34,7 @@ const SignUp = () => {
             console.log(token)
             localStorage.setItem('user', response.data.username);
             localStorage.setItem('isAuthenticated', true);
+            alert('Signup Sucessfully');
             navigate('/home'); // Redirect to login page after successful sign-up
         } catch (error) {
             setError('Error signing up', error);

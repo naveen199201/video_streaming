@@ -17,7 +17,7 @@ export default function BasicMenu() {
   };
 
   const handleLogout = () => {
-    alert("logout")
+    alert("logout sucessfully")
     localStorage.clear();
     navigate('/');
   }
