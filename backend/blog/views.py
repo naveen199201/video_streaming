@@ -12,6 +12,7 @@ from rest_framework.response import Response
 # from rest_framework.permissions import IsAuthenticated
 from rest_framework import viewsets, permissions
 from rest_framework.response import Response
+from django.db.models import Q
 from .models import Video
 from .serializers import VideoSerializer
 
@@ -28,7 +29,7 @@ class VideoViewSet(viewsets.ModelViewSet):
 
         # If the user is authenticated, perform the search
         if user.is_authenticated:
-            videos = Video.objects.all()  # Default queryset
+            videos = Video.objects.filter(Q(uploader=user,privacy='private') | Q(privacy='public'))  # Default queryset
             if query:
                 videos = videos.filter(title__icontains=query)  # Filter by title containing the search query
             if privacy:
