@@ -10,7 +10,7 @@ class Video(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     file = models.FileField(upload_to='videos/')
-    thumbnail = models.ImageField(upload_to='thumbnails/')  # Add thumbnail field
+    thumbnail = models.ImageField(upload_to='thumbnails/',default='thumbnails/img1.jpg')  # Add thumbnail field
     privacy = models.CharField(max_length=10, choices=PRIVACY_CHOICES)
     uploader = models.ForeignKey(User, on_delete=models.CASCADE)
     views_count = models.IntegerField(default=0)

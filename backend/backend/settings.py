@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y0h2&_$u6jm!6h^9p&vh=_fe&oqlbf%og)ug(&=vevxs378ks('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','localhost','*']
 
 
 # Application definition
@@ -86,16 +87,34 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres.xbpccwxxtwtylayehnej',
+#         'PASSWORD': 'sklktksn@383',
+#         'HOST': 'aws-0-ap-south-1.pooler.supabase.com',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres.xbpccwxxtwtylayehnej',
-        'PASSWORD': 'sklktksn@383',
-        'HOST': 'aws-0-ap-south-1.pooler.supabase.com',
+        'NAME': 'wfvzeieb',
+        'USER': 'wfvzeieb',
+        'PASSWORD': 'Oh3QvxrIDs7az5Af0HsHhvPt9-5ze_Bv',
+        'HOST': 'raja.db.elephantsql.com',
         'PORT': '5432',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',  # Add this line
@@ -139,8 +158,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Defaul    t primary key field type
+# Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
